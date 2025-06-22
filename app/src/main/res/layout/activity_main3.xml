@@ -1,0 +1,827 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="375dp"
+    android:layout_height="812dp"
+    android:background="#FAFBF9"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/indicator"
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="start"
+        android:background="#134313"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/buttonpesquisar"
+        android:ems="10"
+        android:fontFamily="@font/plus_jakarta_sans"
+        android:hint="Procurar"
+        android:inputType="text"
+        android:paddingHorizontal="40dp"
+        android:textColorHint="#134313"
+        android:textColor="#134313"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btnUsuarios"
+            android:layout_width="105dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="4dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="Usuários"
+            android:paddingTop="19dp"
+            android:textColor="#134313"
+            app:layout_constraintBottom_toBottomOf="@+id/indicator"
+            app:layout_constraintEnd_toStartOf="@+id/btnBrechos"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnBrechos"
+            android:layout_width="105dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="4dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="Brechós"
+            android:paddingTop="19dp"
+            android:textColor="#134313"
+            app:layout_constraintBottom_toBottomOf="@+id/indicator"
+            app:layout_constraintEnd_toStartOf="@+id/btnVendas"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnUsuarios" />
+
+        <Button
+            android:id="@+id/btnVendas"
+            android:layout_width="105dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="4dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="Vendas"
+            android:paddingTop="19dp"
+            android:textColor="#134313"
+            app:layout_constraintBottom_toBottomOf="@+id/indicator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnBrechos" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toStartOf="@+id/editTextText"
+        app:layout_constraintTop_toTopOf="@+id/editTextText"
+        app:layout_constraintVertical_bias="0.6"
+        app:srcCompat="@drawable/pesquisar"
+        tools:ignore="TouchTargetSizeCheck"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="165dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView1"
+        android:layout_width="350dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/perfil1"
+            android:layout_width="match_parent"
+            android:layout_height="78dp">
+
+            <ImageView
+                android:id="@+id/imageProfile1"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circleimage"
+                android:clipToOutline="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/imagem1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewNome1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/alata"
+                android:text="Eduardo Neumann"
+                android:textSize="20dp"
+                android:textColor="#134313"
+                app:layout_constraintStart_toEndOf="@+id/imageProfile1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewNomep1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/alata"
+                android:text="@eduardo_neumann"
+                android:textSize="12dp"
+                android:textColor="#134313"
+                app:layout_constraintStart_toEndOf="@+id/imageProfile1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/estrelapreenchida"
+                    tools:layout_editor_absoluteX="193dp"
+                    tools:layout_editor_absoluteY="30dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/estrelapreenchida"
+                    tools:layout_editor_absoluteX="193dp"
+                    tools:layout_editor_absoluteY="30dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/estrelapreenchida"
+                    tools:layout_editor_absoluteX="193dp"
+                    tools:layout_editor_absoluteY="30dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/estrelapreenchida"
+                    tools:layout_editor_absoluteX="193dp"
+                    tools:layout_editor_absoluteY="30dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/estrelavazia"
+                    tools:layout_editor_absoluteX="193dp"
+                    tools:layout_editor_absoluteY="30dp" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="350dp"
+        android:layout_height="79dp"
+        android:background="@color/black"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView1"
+        app:layout_editor_absoluteY="50dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/perfil2"
+            android:layout_width="match_parent"
+            android:layout_height="78dp">
+
+            <ImageView
+                android:id="@+id/imageProfile2"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circleimage"
+                android:clipToOutline="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewNome2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/alata"
+                android:text="Claudia"
+                android:textColor="#134313"
+                android:textSize="20dp"
+                app:layout_constraintStart_toEndOf="@+id/imageProfile2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewNomep2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/alata"
+                android:text="@claudia_ofc"
+                android:textColor="#134313"
+                android:textSize="12dp"
+                app:layout_constraintStart_toEndOf="@+id/imageProfile2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/estrelavazia"
+                    tools:layout_editor_absoluteX="193dp"
+                    tools:layout_editor_absoluteY="30dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/estrelavazia"
+                    tools:layout_editor_absoluteX="193dp"
+                    tools:layout_editor_absoluteY="30dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/estrelavazia"
+                    tools:layout_editor_absoluteX="193dp"
+                    tools:layout_editor_absoluteY="30dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/estrelavazia"
+                    tools:layout_editor_absoluteX="193dp"
+                    tools:layout_editor_absoluteY="30dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/estrelavazia"
+                    tools:layout_editor_absoluteX="193dp"
+                    tools:layout_editor_absoluteY="30dp" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="350dp"
+        android:layout_height="79dp"
+        android:background="@color/black"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2"
+        app:layout_editor_absoluteY="50dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/perfil3"
+            android:layout_width="match_parent"
+            android:layout_height="78dp">
+
+            <ImageView
+                android:id="@+id/imageProfile3"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circleimage"
+                android:clipToOutline="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/imagem3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewNome3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/alata"
+                android:text="Joao"
+                android:textColor="#134313"
+                android:textSize="20dp"
+                app:layout_constraintStart_toEndOf="@+id/imageProfile3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewNomep3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/alata"
+                android:text="@joao123"
+                android:textColor="#134313"
+                android:textSize="12dp"
+                app:layout_constraintStart_toEndOf="@+id/imageProfile3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/estrelavazia"
+                    tools:layout_editor_absoluteX="193dp"
+                    tools:layout_editor_absoluteY="30dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/estrelavazia"
+                    tools:layout_editor_absoluteX="193dp"
+                    tools:layout_editor_absoluteY="30dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/estrelavazia"
+                    tools:layout_editor_absoluteX="193dp"
+                    tools:layout_editor_absoluteY="30dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/estrelavazia"
+                    tools:layout_editor_absoluteX="193dp"
+                    tools:layout_editor_absoluteY="30dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/estrelavazia"
+                    tools:layout_editor_absoluteX="193dp"
+                    tools:layout_editor_absoluteY="30dp" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView4"
+        android:layout_width="350dp"
+        android:layout_height="79dp"
+        android:background="@color/black"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3"
+        app:layout_editor_absoluteY="50dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/perfil4"
+            android:layout_width="match_parent"
+            android:layout_height="78dp">
+
+            <ImageView
+                android:id="@+id/imageProfile4"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circleimage"
+                android:clipToOutline="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/imagem4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewNome4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/alata"
+                android:text="Isis"
+                android:textColor="#134313"
+                android:textSize="20dp"
+                app:layout_constraintStart_toEndOf="@+id/imageProfile4"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewNomep4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/alata"
+                android:text="@Isisp"
+                android:textColor="#134313"
+                android:textSize="12dp"
+                app:layout_constraintStart_toEndOf="@+id/imageProfile4"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/estrelapreenchida"
+                    tools:layout_editor_absoluteX="193dp"
+                    tools:layout_editor_absoluteY="30dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/estrelapreenchida"
+                    tools:layout_editor_absoluteX="193dp"
+                    tools:layout_editor_absoluteY="30dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/estrelapreenchida"
+                    tools:layout_editor_absoluteX="193dp"
+                    tools:layout_editor_absoluteY="30dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/estrelapreenchida"
+                    tools:layout_editor_absoluteX="193dp"
+                    tools:layout_editor_absoluteY="30dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/estrelavazia"
+                    tools:layout_editor_absoluteX="193dp"
+                    tools:layout_editor_absoluteY="30dp" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView5"
+        android:layout_width="350dp"
+        android:layout_height="79dp"
+        android:background="@color/black"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView4"
+        app:layout_editor_absoluteY="50dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/perfil5"
+            android:layout_width="match_parent"
+            android:layout_height="78dp">
+
+            <ImageView
+                android:id="@+id/imageProfile5"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circleimage"
+                android:clipToOutline="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/imagem5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewNome5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/alata"
+                android:text="Bruna"
+                android:textColor="#134313"
+                android:textSize="20dp"
+                app:layout_constraintStart_toEndOf="@+id/imageProfile5"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewNomep5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/alata"
+                android:text="@bruna_m"
+                android:textColor="#134313"
+                android:textSize="12dp"
+                app:layout_constraintStart_toEndOf="@+id/imageProfile5"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/estrelapreenchida"
+                    tools:layout_editor_absoluteX="193dp"
+                    tools:layout_editor_absoluteY="30dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/estrelapreenchida"
+                    tools:layout_editor_absoluteX="193dp"
+                    tools:layout_editor_absoluteY="30dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/estrelapreenchida"
+                    tools:layout_editor_absoluteX="193dp"
+                    tools:layout_editor_absoluteY="30dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/estrelapreenchida"
+                    tools:layout_editor_absoluteX="193dp"
+                    tools:layout_editor_absoluteY="30dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/estrelavazia"
+                    tools:layout_editor_absoluteX="193dp"
+                    tools:layout_editor_absoluteY="30dp" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView6"
+        android:layout_width="350dp"
+        android:layout_height="79dp"
+        android:background="@color/black"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView5"
+        app:layout_editor_absoluteY="50dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/perfil6"
+            android:layout_width="match_parent"
+            android:layout_height="78dp">
+
+            <ImageView
+                android:id="@+id/imageProfile6"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circleimage"
+                android:clipToOutline="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/imagem6"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewNome6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/alata"
+                android:text="Whindersson"
+                android:textColor="#134313"
+                android:textSize="20dp"
+                app:layout_constraintStart_toEndOf="@+id/imageProfile6"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewNomep6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/alata"
+                android:text="@whindersson1"
+                android:textColor="#134313"
+                android:textSize="12dp"
+                app:layout_constraintStart_toEndOf="@+id/imageProfile6"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/estrelapreenchida"
+                    tools:layout_editor_absoluteX="193dp"
+                    tools:layout_editor_absoluteY="30dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/estrelapreenchida"
+                    tools:layout_editor_absoluteX="193dp"
+                    tools:layout_editor_absoluteY="30dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/estrelapreenchida"
+                    tools:layout_editor_absoluteX="193dp"
+                    tools:layout_editor_absoluteY="30dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/estrelapreenchida"
+                    tools:layout_editor_absoluteX="193dp"
+                    tools:layout_editor_absoluteY="30dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/estrelavazia"
+                    tools:layout_editor_absoluteX="193dp"
+                    tools:layout_editor_absoluteY="30dp" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rodape"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#5E7858"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/imageButtonCloset"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="27dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/closet"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/imageButtonPesquisar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="27dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageButtonAdd"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toEndOf="@+id/imageButtonCloset"
+            app:srcCompat="@drawable/pesquisaricon"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/imageButtonAdd"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="15dp"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/baseline_add_circle_24"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/imageButtonDoacao"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="27dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/presente"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageButtonPerfil"
+            app:layout_constraintStart_toEndOf="@+id/imageButtonAdd" />
+
+        <ImageButton
+            android:id="@+id/imageButtonPerfil"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="27dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/perfil"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
