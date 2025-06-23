@@ -1,6 +1,7 @@
 package com.eduardo.exercicio4
 
 import android.animation.ObjectAnimator
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
@@ -22,17 +23,16 @@ class MainActivity4 : AppCompatActivity() {
             val button = binding.btnCloset
             val indicator = binding.indicator
 
-            // Calcula a posição central do botão "Usuários" menos metade da largura da barra
             val targetX = button.x + button.width / 2f - indicator.width / 2f
 
-            // Define a posição inicial do indicador
             indicator.translationX = targetX
         }
 
 
-        // Clique nos botões
         binding.btnCloset.setOnClickListener { moveIndicatorTo(it) }
-        binding.btnCloset.setOnClickListener { moveIndicatorTo(it) }
+        binding.btnAvenda.setOnClickListener { moveIndicatorTo(it) }
+
+        initListeners()
     }
 
     private fun moveIndicatorTo(button: View) {
@@ -40,5 +40,29 @@ class MainActivity4 : AppCompatActivity() {
         val animator = ObjectAnimator.ofFloat(binding.indicator, "translationX", targetX)
         animator.duration = 200
         animator.start()
+    }
+
+    private fun initListeners(){
+        binding.imageButtonVoltar.setOnClickListener {
+            startActivity(Intent(this,MainActivity3::class.java))
+        }
+        binding.imageButtonProcurar.setOnClickListener {
+            startActivity(Intent(this,MainActivity3::class.java))
+        }
+        binding.imageButtonCloset.setOnClickListener {
+            startActivity(Intent(this,MainActivity::class.java))
+        }
+        binding.imageButtonPesquisar.setOnClickListener {
+            startActivity(Intent(this,MainActivity3::class.java))
+        }
+        binding.imageButtonAdd.setOnClickListener {
+            startActivity(Intent(this,MainActivity::class.java))
+        }
+        binding.imageButtonDoacao.setOnClickListener {
+            startActivity(Intent(this,MainActivity::class.java))
+        }
+        binding.imageButtonPerfil.setOnClickListener {
+            startActivity(Intent(this,MainActivity::class.java))
+        }
     }
 }

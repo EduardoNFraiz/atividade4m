@@ -23,20 +23,17 @@ class MainActivity3 : AppCompatActivity() {
             val button = binding.btnUsuarios
             val indicator = binding.indicator
 
-            // Calcula a posição central do botão "Usuários" menos metade da largura da barra
             val targetX = button.x + button.width / 2f - indicator.width / 2f
 
-            // Define a posição inicial do indicador
             indicator.translationX = targetX
-
-            initListeners()
         }
 
 
-        // Clique nos botões
         binding.btnUsuarios.setOnClickListener { moveIndicatorTo(it) }
         binding.btnBrechos.setOnClickListener { moveIndicatorTo(it) }
         binding.btnVendas.setOnClickListener { moveIndicatorTo(it) }
+
+        initListeners()
     }
 
     private fun moveIndicatorTo(button: View) {
@@ -48,22 +45,40 @@ class MainActivity3 : AppCompatActivity() {
 
     private fun initListeners(){
         binding.cardView1.setOnClickListener {
-            startActivity(Intent(this,MainActivity2::class.java))
+            startActivity(Intent(this,MainActivity4::class.java))
         }
         binding.cardView2.setOnClickListener {
-            startActivity(Intent(this,MainActivity2::class.java))
+            startActivity(Intent(this,MainActivity4::class.java))
         }
         binding.cardView3.setOnClickListener {
-            startActivity(Intent(this,MainActivity2::class.java))
+            startActivity(Intent(this,MainActivity4::class.java))
         }
         binding.cardView4.setOnClickListener {
-            startActivity(Intent(this,MainActivity2::class.java))
+            startActivity(Intent(this,MainActivity4::class.java))
         }
         binding.cardView5.setOnClickListener {
-            startActivity(Intent(this,MainActivity2::class.java))
+            startActivity(Intent(this,MainActivity4::class.java))
         }
         binding.cardView6.setOnClickListener {
-            startActivity(Intent(this,MainActivity2::class.java))
+            startActivity(Intent(this,MainActivity4::class.java))
+        }
+        binding.imageButtonProcurar.setOnClickListener {
+            startActivity(Intent(this,MainActivity::class.java))
+        }
+        binding.imageButtonCloset.setOnClickListener {
+            startActivity(Intent(this,MainActivity::class.java))
+        }
+        binding.imageButtonPesquisar.setOnClickListener {
+            startActivity(Intent(this,MainActivity::class.java))
+        }
+        binding.imageButtonAdd.setOnClickListener {
+            startActivity(Intent(this,MainActivity::class.java))
+        }
+        binding.imageButtonDoacao.setOnClickListener {
+            startActivity(Intent(this,MainActivity::class.java))
+        }
+        binding.imageButtonPerfil.setOnClickListener {
+            startActivity(Intent(this,MainActivity::class.java))
         }
     }
 }

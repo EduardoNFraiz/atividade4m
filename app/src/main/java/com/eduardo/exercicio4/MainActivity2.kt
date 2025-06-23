@@ -35,6 +35,9 @@ class MainActivity2 : AppCompatActivity() {
         binding.buttonLogar.setOnClickListener {
             startActivity(Intent(this, MainActivity3::class.java))
         }
+        binding.textViewEsqueceuASenha.setOnClickListener {
+            startActivity(Intent(this,MainActivity::class.java))
+        }
     }
 
 
